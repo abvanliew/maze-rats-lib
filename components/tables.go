@@ -99,6 +99,35 @@ func generateTables() {
 	)
 	shapeMagic()
 
+	tables["AerialAnimals"] = newTable([36]string{
+		"Albatross", "Bat", "Beelte", "Bird of Paradice", "Butterfly", "Condor",
+		"Crane", "Crow", "Dragonfly", "Eagle", "Falcon", "Firefly",
+		"Flamingo", "Fly", "Flying Squirrel", "Goose", "Gull", "Hummingbird",
+		"Kingfisher", "Locust", "Magpie", "Mantis", "Mockingbird", "Mosquito",
+		"Moth", "Owl", "Parrot", "Peacock", "Pelican", "Pteranodon",
+		"Rooster", "Sparrow", "Swan", "Vultrue", "Wasp", "Woodpecker"},
+	)
+
+	tables["MonsterFeatures"] = newTable([36]string{
+		"Antlers", "Beak", "Carapace", "Claws", "Componend Eyes", "Eye Stalks",
+		"Fangs", "Fins", "Fur", "Gills", "Hooves", "Horns",
+		"Legless", "Long Tongue", "Many-eyed", "Many-limbed", "Mucus", "Pincers",
+		"Antlers", "Beak", "Carapace", "Claws", "Componend Eyes", "Eye Stalks",
+		"Fangs", "Fins", "Fur", "Gills", "Hooves", "Horns",
+		"Legless", "Long Tongue", "Many-eyed", "Many-limbed", "Mucus", "Wings"},
+	)
+
+	tables["MonsterTraits"] = newTable([36]string{
+		"Amphibious", "Bloated", "Brittle", "Cannibal", "Clay-like", "Colossal",
+		"Crystalline", "Decaying", "%v", "Ethereal", "Ever-young", "Eyeless",
+		"Fearless", "Fluffy", "Fungal", "Gelatinous", "Geometric", "Hardened",
+		"Antlers", "Beak", "Carapace", "Claws", "Componend Eyes", "Eye Stalks",
+		"%v", "Fins", "Fur", "Gills", "Hooves", "Horns",
+		"Legless", "Long Tongue", "Many-eyed", "Many-limbed", "Mucus", "Wings"},
+	)
+	tables["MonsterTraits"].addReference("EtherealElement", 8)
+	tables["MonsterTraits"].addReference("PhysicalElement", 24)
+
 	tables["ReferenceTest"] = newTable([36]string{
 		"%v-skin", "%v-skin", "%v-skin", "%v-skin", "%v-skin", "%v-skin",
 		"%v-feet", "%v-feet", "%v-feet", "%v-feet", "%v-feet", "%v-feet",

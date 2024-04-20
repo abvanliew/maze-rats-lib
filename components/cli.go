@@ -51,13 +51,7 @@ func startUp(cmd *cobra.Command, args []string) {
 }
 
 func spellExecute(cmd *cobra.Command, args []string) {
-	count := 1
-	if len(args) > 0 {
-		i, err := strconv.Atoi(args[0])
-		if err == nil {
-			count = i
-		}
-	}
+	count := iterateCount(args)
 
 	for i := 0; i < count; i++ {
 		fmt.Println(Arcane.PickSpell())
@@ -66,4 +60,15 @@ func spellExecute(cmd *cobra.Command, args []string) {
 
 func testExecute(cmd *cobra.Command, args []string) {
 	fmt.Println(tables["ReferenceTest"].pick())
+}
+
+func iterateCount(args []string) int {
+	count := 1
+	if len(args) > 0 {
+		i, err := strconv.Atoi(args[0])
+		if err == nil {
+			count = i
+		}
+	}
+	return count
 }
